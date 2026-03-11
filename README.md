@@ -1,7 +1,7 @@
 # IndicVisionBench
 
 [![ICLR 2026](https://img.shields.io/badge/ICLR-2026-blue)](https://openreview.net/forum?id=LmJoLn04iL)
-[![Static Badge](https://img.shields.io/badge/Huggingface-IndicVisionBench-yellow?logo=huggingface)](https://huggingface.co/datasets/alifaraz/IndicVisionBench)
+[![Static Badge](https://img.shields.io/badge/Huggingface-IndicVisionBench-yellow?logo=huggingface)](https://huggingface.co/datasets/krutrim-ai-labs/IndicVisionBench)
 [![arXiv](https://img.shields.io/badge/arXiv-2511.04727-b31b1b.svg)](https://arxiv.org/abs/2511.04727)
 
 This repository provides the inference and evaluation scripts for the **IndicVisionBench** benchmark.
@@ -26,7 +26,7 @@ python generation/generate_predictions.py \
     --model llama \
     --output_path outputs/ocr_llama_preds.json \
     --num_samples 10 \
-    --api_key YOUR_API_KEY
+    --api_key YOUR_KRUTRIM_API_KEY
 ```
 For the VQA track.
 ```bash
@@ -37,7 +37,7 @@ python generation/generate_predictions.py \
     --split vqa_indic \
     --output_path outputs/vqa_llama_preds.json \
     --num_samples 10 \
-    --api_key YOUR_API_KEY
+    --api_key YOUR_KRUTRIM_API_KEY
 ```
 For the MMT track.
 ```bash
@@ -47,7 +47,7 @@ python generation/generate_predictions.py \
     --output_path outputs/mmt_llama_preds.json \
     --target_languages Hindi Tamil Bengali \
     --num_samples 10 \
-    --api_key YOUR_API_KEY
+    --api_key YOUR_KRUTRIM_API_KEY
 ```
 
 ### Evaluate outputs
@@ -126,6 +126,7 @@ Before running the data generation scripts, arrange images and metadata in the f
 - category
 
 #### Example folder structure
+```
 /state_wise_images/
 ├── Kerala/
 │   ├── Food/
@@ -144,6 +145,7 @@ Before running the data generation scripts, arrange images and metadata in the f
 │   │   ├── golden-temple.jpg
 │   │   └── gurpurab.jpg
 │   └── metadata.csv
+```
 
 The `data_generation/` folder contains scripts used to construct the benchmark dataset. The pipeline is as follows:
 
@@ -215,7 +217,7 @@ To construct the IVB-OCR benchmark, follow the steps below:
 
 ### License
 
-This code repository is licensed under the [Krutrim Community License Agreement Version 1.0](LICENSE.md)
+This code repository is licensed under the [Krutrim Community License Agreement Version 1.0](LICENSE.md).
 
 ### Citation
 
