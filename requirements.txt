@@ -1,0 +1,13 @@
+datasets
+huggingface_hub
+openai
+pillow
+tqdm
+requests
+evaluate
+sacrebleu
+torch
+gradio
+pandas
+tenacity
+beautifulsoup4
